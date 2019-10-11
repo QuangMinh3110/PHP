@@ -7,7 +7,7 @@
 <?php
 echo "Show all rows from Postgres Database";
 //Refere to database
-$db = parse_url(getenv("DATABASE_URL"));
+$db = parse_url(getenv("ec2-174-129-227-51.compute-1.amazonaws.com"));
 $pdo = new PDO("pgsql:" . sprintf(
     "host=%s;port=%s;user=%s;password=%s;dbname=%s",
     $db["host"],
